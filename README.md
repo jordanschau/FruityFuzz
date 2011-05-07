@@ -22,6 +22,6 @@ python fruityfuzzer.py -a ./path/to/executable -f ./path/to/file -t ./path/to/di
         -h: Help page
 
 Ex: python FruityFuzz.py -a '/Applications/Preview.app/Contents/MacOS/Preview' 
-    \   -f '/Users/username/Desktop/fuzzypsd.psd' -t '/Users/username/Desktop/fuzz2 -c 500 -T 3 -v
+        -f '/Users/username/Desktop/fuzzypsd.psd' -t '/Users/username/Desktop/fuzz2 -c 500 -T 3 -v
 
 </code></pre>
