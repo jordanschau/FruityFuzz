@@ -179,7 +179,7 @@ def usage():
     print "        -v: Verbose"
     print "        -h: Help page"
     print ""
-    print "Ex: python FruityFuzz.py -a '/Applications/Preview.app/Contents/MacOS/Preview' -f '/Users/jordanschau/Desktop/fuzzypsd.psd' -t '/Users/jordanschau/Desktop/fuzz2 -c 500 -T 3 -v"
+    print "Ex: python FruityFuzz.py -a '/Applications/Preview.app/Contents/MacOS/Preview' -f '/Users/username/Desktop/fuzzypsd.psd' -t '/Users/username/Desktop/fuzz2 -c 500 -T 3 -v"
 
 verbose = False
 app_path = ""
