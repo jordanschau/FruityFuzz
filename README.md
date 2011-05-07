@@ -10,7 +10,7 @@ fully functional.
 
 ## Usage
 <pre><code class="python">
-python fruityfuzzer.py -a `<./path/to/executable> -f <./path/to/file> -t <./path/to/directory/for/test/files> [options]
+python fruityfuzzer.py -a ./path/to/executable -f ./path/to/file -t ./path/to/directory/for/test/files [options]
     [required]
         -a: Path to Application Executable
         -f: File to seed the Fuzzness
