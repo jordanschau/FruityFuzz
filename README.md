@@ -1,5 +1,6 @@
-# FruityFuzz
-
+FruityFuzz
+========
+---
 ## Introduction
 
 This is a project for COMS E6998-9: Software Security and Exploitation.
@@ -7,8 +8,8 @@ This is a project for COMS E6998-9: Software Security and Exploitation.
 I have created a simple mutation-based file fuzzer for Mac.  It is a work in progress and is not
 fully functional.
 
-## Usage:
-python fruityfuzzer.py -a <./path/to/executable> -f <./path/to/file> -t <./path/to/directory/for/test/files> [options]
+## Usage
+<code>python fruityfuzzer.py -a <./path/to/executable> -f <./path/to/file> -t <./path/to/directory/for/test/files> [options]
 
  [required]
         -a: Path to Application Executable
@@ -20,6 +21,5 @@ python fruityfuzzer.py -a <./path/to/executable> -f <./path/to/file> -t <./path/
         -v: Verbose
         -h: Help page
 
-Ex: python FruityFuzz.py -a '/Applications/Preview.app/Contents/MacOS/Preview' -f '/Users/username/Desktop/fuzzypsd.psd' -t '/Users/username/Desktop/fuzz2 -c 500 -T 3 -v
-
+Ex: python FruityFuzz.py -a '/Applications/Preview.app/Contents/MacOS/Preview' -f '/Users/username/Desktop/fuzzypsd.psd' -t '/Users/username/Desktop/fuzz2 -c 500 -T 3 -v</code>
 
