@@ -1,0 +1,327 @@
+Tmacdll
+v3
+r1
+cCheck dependencies
+cCompileC build/macdll.build/Debug/macdll.build/Objects-normal/i386/dyld.o /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/dyld.c normal i386 c com.apple.compilers.llvmgcc42
+cMig /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/MachExceptions.defs i386
+cCompileC build/macdll.build/Debug/macdll.build/Objects-normal/i386/implementation.o /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/implementation.c normal i386 c com.apple.compilers.llvmgcc42
+cCompileC build/macdll.build/Debug/macdll.build/Objects-normal/i386/Exception.o /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/Exception.c normal i386 c com.apple.compilers.llvmgcc42
+cCompileC build/macdll.build/Debug/macdll.build/Objects-normal/i386/MachExceptionsServer.o /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/DerivedSources/i386/MachExceptionsServer.c normal i386 c com.apple.compilers.llvmgcc42
+cCompileC build/macdll.build/Debug/macdll.build/Objects-normal/i386/MacDll.o /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/MacDll.c normal i386 c com.apple.compilers.llvmgcc42
+cLd /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/Debug/libmacdll.dylib normal i386
+
+N/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin10/4.2.1/include/stdbool.h
+c000000004D55C8260000000000000644
+t1297467430
+s1604
+
+N/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/Exception.c
+c000000004DA0866200000000000043ED
+t1302365794
+s17389
+i<assert.h>
+i<stdio.h>
+i<stdlib.h>
+i<mach/mach.h>
+i<pthread.h>
+i<unistd.h>
+i<stdbool.h>
+i"MachExceptionsServer.h"
+i"Exception.h"
+i"implementation.h"
+
+N/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/Exception.h
+c000000004DA086620000000000000178
+t1302365794
+s376
+
+N/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/MacDll.c
+c000000004DA08662000000000000350E
+t1302365794
+s13582
+i<stdio.h>
+i<sys/types.h>
+i<sys/stat.h>
+i<sys/ptrace.h>
+i<stdio.h>
+i"MacDll.h"
+i"dyld.h"
+
+N/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/MacDll.h
+c000000004DA086620000000000001041
+t1302365794
+s4161
+i<mach/mach.h>
+i"windows.h"
+i"implementation.h"
+i"Exception.h"
+i<signal.h>
+i<stdlib.h>
+i<stdio.h>
+i<mach/mach_traps.h>
+i<mach/mach_types.h>
+i<string.h>
+i<mach/thread_status.h>
+i<unistd.h>
+i<mach/mach.h>
+i<sys/types.h>
+i<sys/sysctl.h>
+
+N/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/MachExceptions.defs
+c000000004DA086620000000000000019
+t1302365794
+s25
+
+N/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/Debug/libmacdll.dylib
+t2
+s0
+
+N/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/DerivedSources/i386/MachExceptionsServer.c
+t2
+s0
+
+N/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/DerivedSources/i386/MachExceptionsServer.h
+t2
+s0
+
+N/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/Objects-normal/i386/Exception.o
+t2
+s0
+
+N/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/Objects-normal/i386/MacDll.o
+t2
+s0
+
+N/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/Objects-normal/i386/MachExceptionsServer.o
+t2
+s0
+
+N/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/Objects-normal/i386/dyld.o
+t2
+s0
+
+N/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/Objects-normal/i386/implementation.o
+t2
+s0
+
+N/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/Objects-normal/i386/macdll.LinkFileList
+c000000004DA08690000000000000030F
+t1302365840
+s783
+
+N/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/dyld.c
+c000000004DA086620000000000000A50
+t1302365794
+s2640
+i<mach-o/ldsyms.h>
+i"MacDll.h"
+i"dyld.h"
+i"implementation.h"
+
+N/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/dyld.h
+c000000004DA086620000000000000138
+t1302365794
+s312
+
+N/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/implementation.c
+c000000004DA0866200000000000028D4
+t1302365794
+s10452
+i<stdlib.h>
+i<sys/types.h>
+i<sys/ptrace.h>
+i<stdio.h>
+i<mach/mach.h>
+i<mach/mach_traps.h>
+i<mach/mach_types.h>
+i<string.h>
+i<mach/thread_status.h>
+i<unistd.h>
+i<signal.h>
+i<setjmp.h>
+i<implementation.h>
+i"Exception.h"
+
+N/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/implementation.h
+c000000004DA0866200000000000006E8
+t1302365794
+s1768
+
+N/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/windows.h
+c000000004DA086620000000000001507
+t1302365794
+s5383
+
+N/usr/include/assert.h
+c000000004BBD2CE90000000000000DCB
+t1270689001
+s3531
+
+N/usr/include/mach-o/ldsyms.h
+c000000004D55A72B000000000000151C
+t1297458987
+s5404
+
+N/usr/include/mach/mach.h
+c000000004BD247AA0000000000001057
+t1272072106
+s4183
+
+N/usr/include/mach/mach_traps.h
+c000000004CC3DE6700000000000010A7
+t1287904871
+s4263
+
+N/usr/include/mach/mach_types.h
+c000000004CC3DE670000000000001EB9
+t1287904871
+s7865
+
+N/usr/include/mach/thread_status.h
+c000000004CC3DE680000000000000DA4
+t1287904872
+s3492
+
+N/usr/include/pthread.h
+c000000004BBD2CE900000000000038F0
+t1270689001
+s14576
+
+N/usr/include/setjmp.h
+c000000004BBD2CE90000000000000438
+t1270689001
+s1080
+
+N/usr/include/signal.h
+c000000004BBD2CE900000000000014F0
+t1270689001
+s5360
+
+N/usr/include/stdio.h
+c000000004BBD2CE90000000000004174
+t1270689001
+s16756
+
+N/usr/include/stdlib.h
+c000000004BBD2CE90000000000002DF5
+t1270689001
+s11765
+
+N/usr/include/string.h
+c000000004BBD2CE90000000000001731
+t1270689001
+s5937
+
+N/usr/include/sys/ptrace.h
+c000000004CC3DE67000000000000118F
+t1287904871
+s4495
+
+N/usr/include/sys/stat.h
+c000000004CC3DE680000000000004A1D
+t1287904872
+s18973
+
+N/usr/include/sys/sysctl.h
+c000000004CC3DE680000000000007974
+t1287904872
+s31092
+
+N/usr/include/sys/types.h
+c000000004CC3DE680000000000002905
+t1287904872
+s10501
+
+N/usr/include/unistd.h
+c000000004BBD2CE9000000000000563E
+t1270689001
+s22078
+
+CCheck dependencies
+r0
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies959d620fbe50b341^d8627f10be50b341^---0#1#0#--18"Check dependencies
+
+CCompileC build/macdll.build/Debug/macdll.build/Objects-normal/i386/Exception.o /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/Exception.c normal i386 c com.apple.compilers.llvmgcc42
+s324058641.600234
+e324058641.688715
+r1
+xCompileC
+xbuild/macdll.build/Debug/macdll.build/Objects-normal/i386/Exception.o
+x/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/Exception.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"Compile /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/Exception.cc6c19911be50b341^a855b011be50b341^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/Exception.c0000000000000000^1508"CompileC build/macdll.build/Debug/macdll.build/Objects-normal/i386/Exception.o Exception.c normal i386 c com.apple.compilers.llvmgcc42    cd /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wunused-function -Wunused-label -Wunused-parameter -Wunused-variable -Wunused-value -fasm-blocks -mmacosx-version-min=10.4 -gdwarf-2 -fvisibility=hidden -I/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/macdll.hmap -I/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/Debug/include -I/Library/Frameworks/Python.framework/Versions/2.4/include/python2.4 -I/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/DerivedSources/i386 -I/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/DerivedSources -Wall -F/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/Debug -c /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/Exception.c -o /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/Objects-normal/i386/Exception.o
+
+CCompileC build/macdll.build/Debug/macdll.build/Objects-normal/i386/MacDll.o /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/MacDll.c normal i386 c com.apple.compilers.llvmgcc42
+s324058641.694423
+e324058641.808040
+r1
+xCompileC
+xbuild/macdll.build/Debug/macdll.build/Objects-normal/i386/MacDll.o
+x/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/MacDll.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Compile /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/MacDll.c82e4b111be50b341^98dace11be50b341^---0#0#0#-19%DVTDocumentLocation2@109"file://localhost/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/MacDll.c0000000000000000^1496"CompileC build/macdll.build/Debug/macdll.build/Objects-normal/i386/MacDll.o MacDll.c normal i386 c com.apple.compilers.llvmgcc42    cd /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wunused-function -Wunused-label -Wunused-parameter -Wunused-variable -Wunused-value -fasm-blocks -mmacosx-version-min=10.4 -gdwarf-2 -fvisibility=hidden -I/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/macdll.hmap -I/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/Debug/include -I/Library/Frameworks/Python.framework/Versions/2.4/include/python2.4 -I/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/DerivedSources/i386 -I/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/DerivedSources -Wall -F/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/Debug -c /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/MacDll.c -o /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/Objects-normal/i386/MacDll.o
+
+CCompileC build/macdll.build/Debug/macdll.build/Objects-normal/i386/MachExceptionsServer.o /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/DerivedSources/i386/MachExceptionsServer.c normal i386 c com.apple.compilers.llvmgcc42
+s324058641.641854
+e324058641.720809
+r1
+xCompileC
+xbuild/macdll.build/Debug/macdll.build/Objects-normal/i386/MachExceptionsServer.o
+x/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/DerivedSources/i386/MachExceptionsServer.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection173"Compile /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/DerivedSources/i386/MachExceptionsServer.ccf67a411be50b341^5e85b811be50b341^---0#0#0#-19%DVTDocumentLocation2@181"file://localhost/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/DerivedSources/i386/MachExceptionsServer.c0000000000000000^1668"CompileC build/macdll.build/Debug/macdll.build/Objects-normal/i386/MachExceptionsServer.o build/macdll.build/Debug/macdll.build/DerivedSources/i386/MachExceptionsServer.c normal i386 c com.apple.compilers.llvmgcc42    cd /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wunused-function -Wunused-label -Wunused-parameter -Wunused-variable -Wunused-value -fasm-blocks -mmacosx-version-min=10.4 -gdwarf-2 -fvisibility=hidden -I/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/macdll.hmap -I/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/Debug/include -I/Library/Frameworks/Python.framework/Versions/2.4/include/python2.4 -I/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/DerivedSources/i386 -I/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/DerivedSources -Wall -F/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/Debug -c /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/DerivedSources/i386/MachExceptionsServer.c -o /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/Objects-normal/i386/MachExceptionsServer.o
+
+CCompileC build/macdll.build/Debug/macdll.build/Objects-normal/i386/dyld.o /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/dyld.c normal i386 c com.apple.compilers.llvmgcc42
+s324058640.523112
+e324058641.641564
+r1
+xCompileC
+xbuild/macdll.build/Debug/macdll.build/Objects-normal/i386/dyld.o
+x/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/dyld.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Compile /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/dyld.c2b178610be50b341^0744a411be50b341^---0#0#0#-19%DVTDocumentLocation2@107"file://localhost/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/dyld.c0000000000000000^1488"CompileC build/macdll.build/Debug/macdll.build/Objects-normal/i386/dyld.o dyld.c normal i386 c com.apple.compilers.llvmgcc42    cd /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wunused-function -Wunused-label -Wunused-parameter -Wunused-variable -Wunused-value -fasm-blocks -mmacosx-version-min=10.4 -gdwarf-2 -fvisibility=hidden -I/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/macdll.hmap -I/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/Debug/include -I/Library/Frameworks/Python.framework/Versions/2.4/include/python2.4 -I/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/DerivedSources/i386 -I/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/DerivedSources -Wall -F/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/Debug -c /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/dyld.c -o /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/Objects-normal/i386/dyld.o
+
+CCompileC build/macdll.build/Debug/macdll.build/Objects-normal/i386/implementation.o /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/implementation.c normal i386 c com.apple.compilers.llvmgcc42
+s324058641.470132
+e324058641.599647
+r1
+xCompileC
+xbuild/macdll.build/Debug/macdll.build/Objects-normal/i386/implementation.o
+x/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/implementation.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvmgcc42
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Compile /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/implementation.c57777811be50b341^ad899911be50b341^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/implementation.c0000000000000000^1528"CompileC build/macdll.build/Debug/macdll.build/Objects-normal/i386/implementation.o implementation.c normal i386 c com.apple.compilers.llvmgcc42    cd /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll    setenv LANG en_US.US-ASCII    /Developer/usr/bin/llvm-gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -O0 -Wmissing-prototypes -Wunused-function -Wunused-label -Wunused-parameter -Wunused-variable -Wunused-value -fasm-blocks -mmacosx-version-min=10.4 -gdwarf-2 -fvisibility=hidden -I/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/macdll.hmap -I/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/Debug/include -I/Library/Frameworks/Python.framework/Versions/2.4/include/python2.4 -I/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/DerivedSources/i386 -I/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/DerivedSources -Wall -F/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/Debug -c /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/implementation.c -o /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/Objects-normal/i386/implementation.o
+
+CLd /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/Debug/libmacdll.dylib normal i386
+s324058641.808357
+e324058642.063845
+r1
+xLd
+x/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/Debug/libmacdll.dylib
+xnormal
+xi386
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection117"Link /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/Debug/libmacdll.dylibde04cf11be50b341^19571012be50b341^---0#0#0#--883"Ld build/Debug/libmacdll.dylib normal i386    cd /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll    setenv MACOSX_DEPLOYMENT_TARGET 10.4    /Developer/usr/bin/llvm-gcc-4.2 -arch i386 -dynamiclib -L/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/Debug -F/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/Debug -filelist /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/Objects-normal/i386/macdll.LinkFileList -install_name /usr/local/lib/libmacdll.dylib -mmacosx-version-min=10.4 -Wl,-read_only_relocs,suppress -single_module -compatibility_version 1 -current_version 1 -o /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/Debug/libmacdll.dylib
+
+CMig /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/MachExceptions.defs i386
+s324058640.523242
+e324058641.469950
+r1
+xMig
+x/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/MachExceptions.defs
+xi386
+lSLF03#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Mig /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/MachExceptions.defs2b178610be50b341^19577811be50b341^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/MachExceptions.defs0000000000000000^939"Mig MachExceptions.defs i386    cd /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll    setenv MIGCC /Developer/usr/bin/gcc    setenv MIGCOM /Developer/usr/bin/../libexec/migcom    setenv SDKROOT     /Developer/usr/bin/mig -arch i386 -header /dev/null -user /dev/null -sheader /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/DerivedSources/i386/MachExceptionsServer.h -server /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/macdll.build/Debug/macdll.build/DerivedSources/i386/MachExceptionsServer.c -I/Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/build/Debug/include -I/Library/Frameworks/Python.framework/Versions/2.4/include/python2.4 /Users/jordanschau/Documents/workspace/FruityFuzz/src/paimei-read-only/MacOSX/macdll/MachExceptions.defs
+
