@@ -81,6 +81,9 @@ def add_fuzz(file):
         
 
 def run_file2(file, executable_name):
+    '''
+        Runs the executable, giving it the fuzzed input via command line
+    '''
     try:
         print "Running %s" % file
         pid = os.fork()
@@ -103,6 +106,9 @@ def run_file2(file, executable_name):
 
     
 def run_file(file):
+    '''
+        Runs the executable, giving it the fuzzed input via command line
+    '''
     try:
         print "Running %s" % file
         pid, fd = pty.fork()
