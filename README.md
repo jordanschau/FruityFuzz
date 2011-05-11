@@ -25,3 +25,6 @@ Ex: python FruityFuzz.py -a '/Applications/Preview.app/Contents/MacOS/Preview'
         -f '/Users/username/Desktop/fuzzypsd.psd' -t '/Users/username/Desktop/fuzz2 -c 50 -T 3 -v
 
 </code></pre>
+
+## Notes
+See report for more details.
