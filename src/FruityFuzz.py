@@ -11,15 +11,12 @@ from os.path import join
 import time
 import pty
 import signal
-import subprocess
 
-
-# overflowstrings = ["A" * 255, "A" * 256, "A" * 257, "A" * 420, "A" * 511, "A" * 512, "A" * 1023, "A" * 1024, "A" * 2047, "A" * 2048, "A" * 4096, "A" * 4097, "A" * 5000, "A" * 10000, "A" * 20000, "A" * 32762, "A" * 32763, "A" * 32764, "A" * 32765, "A" * 32766, "A" * 32767, "A" * 32768, "A" * 65534, "A" * 65535, "A" * 65536, "%x" * 1024, "%n" * 1025 , "%s" * 2048, "%s%n%x%d" * 5000, "%s" * 30000, "%s" * 40000, "%.1024d", "%.2048d", "%.4096d", "%.8200d", "%99999999999s", "%99999999999d", "%99999999999x", "%99999999999n", "%99999999999s" * 1000, "%99999999999d" * 1000, "%99999999999x" * 1000, "%99999999999n" * 1000, "%08x" * 100, "%%20s" * 1000,"%%20x" * 1000,"%%20n" * 1000,"%%20d" * 1000, "%#0123456x%08x%x%s%p%n%d%o%u%c%h%l%q%j%z%Z%t%i%e%g%f%a%C%S%08x%%#0123456x%%x%%s%%p%%n%%d%%o%%u%%c%%h%%l%%q%%j%%z%%Z%%t%%i%%e%%g%%f%%a%%C%%S%%08x"]
 # Why use A's when you can use J's????? !!!!!!!!
 overflowstrings = ["J" * 255, "J" * 256, "J" * 257, "J" * 420, "J" * 511, "J" * 512, "J" * 1023, "J" * 1024, "J" * 2047, "J" * 2048, "J" * 4096, "J" * 4097, "J" * 5000, "J" * 10000, "J" * 20000, "J" * 32762, "J" * 32763, "J" * 32764, "J" * 32765, "J" * 32766, "J" * 32767, "J" * 32768, "J" * 65534, "J" * 65535, "J" * 65536, "%x" * 1024, "%n" * 1025 , "%s" * 2048, "%s%n%x%d" * 5000, "%s" * 30000, "%s" * 40000, "%.1024d", "%.2048d", "%.4096d", "%.8200d", "%99999999999s", "%99999999999d", "%99999999999x", "%99999999999n", "%99999999999s" * 1000, "%99999999999d" * 1000, "%99999999999x" * 1000, "%99999999999n" * 1000, "%08x" * 100, "%%20s" * 1000,"%%20x" * 1000,"%%20n" * 1000,"%%20d" * 1000, "%#0123456x%08x%x%s%p%n%d%o%u%c%h%l%q%j%z%Z%t%i%e%g%f%a%C%S%08x%%#0123456x%%x%%s%%p%%n%%d%%o%%u%%c%%h%%l%%q%%j%%z%%Z%%t%%i%%e%%g%%f%%a%%C%%S%%08x", "%@" * 1000, "%@%%%d%D%i%u%U%hi%hu%qi%qu%x%X%qx%qX%o%O%f%e%E%g%G%c%C%s%S%p%L%a%A%F%z%t%j%ld%lx%lu%lx%f%g%lp%lx%p%lld%llx%llu%llx"]
 LOG_DIR = os.path.expanduser("~/Library/Logs/DiagnosticReports/")
 EXISTING_CRASHES = os.listdir(LOG_DIR)
-sleep_time = 1
+sleep_time = 5
 
 def run_tests(cases):
     """Runs the tests for X cases"""
@@ -46,6 +43,8 @@ def run_tests(cases):
         
     basename, extension = os.path.splitext(file_path)
     
+    executable_path, executable_name = os.path.split(app_path)
+    
     shutil.copy(file_path, join(test_dir, "vanilla_file" + extension))
     
     original_file = "vanilla_file" + extension
@@ -58,7 +57,7 @@ def run_tests(cases):
         test_file_name = "test_%d%s" % (i, extension)
         shutil.copy(original_file, test_file_name)
         add_fuzz(test_file_name)
-        run_file2(test_file_name)
+        run_file2(test_file_name, executable_name)
         check_for_crash(test_file_name)
         i += 1
 
@@ -81,7 +80,7 @@ def add_fuzz(file):
         print "File write error!"
         
 
-def run_file2(file):
+def run_file2(file, executable_name):
     try:
         print "Running %s" % file
         pid = os.fork()
@@ -93,7 +92,7 @@ def run_file2(file):
             print "PID %s, os.getpid() %s" % (pid, os.getpid())
             time.sleep(4)
             os.kill(pid, signal.SIGKILL)
-            os.system("killall %s" % "VLC")
+            os.system("killall %s" % executable_name)
 
                      
     except OSError, e:
@@ -167,26 +166,29 @@ def usage():
     print "http://www.jordanschau.com"
     print
     print "Usage:"
-    print "python fruityfuzzer.py -a <./path/to/executable> -f <./path/to/file> -t <./path/to/directory/for/test/files> [options]"
+    print "python fruityfuzzer.py -a <./path/to/executable> -f <./path/to/file>"
+    print "       -t <./path/to/directory/for/test/files> [options]"
     print
     print " [required]"
     print "        -a: Path to Application Executable"
     print "        -f: File to seed the Fuzzness"
     print " [options]"
     print "        -t: Directory to put the test cases (defaults to ./test/)"
-    print "        -c: Number of test cases to run (defaults to 1000)"
+    print "        -c: Number of test cases to run (defaults to 75)"
     print "        -T: wait time between trials (default is 5 seconds)"
     print "        -v: Verbose"
     print "        -h: Help page"
     print ""
-    print "Ex: python FruityFuzz.py -a '/Applications/Preview.app/Contents/MacOS/Preview' -f '/Users/username/Desktop/fuzzypsd.psd' -t '/Users/username/Desktop/fuzz2 -c 500 -T 3 -v"
+    print "Ex: python FruityFuzz.py -a '/Applications/Preview.app/Contents/MacOS/Preview' "
+    print "           -f '/Users/username/Desktop/fuzzypsd.psd' -t "
+    print "             '/Users/username/Desktop/fuzz2 -c 500 -T 3 -v"
 
 verbose = False
 app_path = ""
 file_path = ""
-cases = 1000 # Number of tests to run
+cases = 75 # Number of tests to run
 sleep_time = 5
-test_dir = "./tests"
+test_dir = ". /tests"
 
 
 def main():
