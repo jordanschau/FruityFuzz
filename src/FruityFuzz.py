@@ -164,6 +164,7 @@ def usage():
     print
     print "FruityFuzzer 0.1, Simple fuzzing for Macs by Jordan Schau"
     print "http://www.jordanschau.com"
+    print "https://github.com/jordanschau/FruityFuzz"
     print
     print "Usage:"
     print "python fruityfuzzer.py -a <./path/to/executable> -f <./path/to/file>"
